@@ -14,13 +14,15 @@ This repo is a mess currently and still being worked on
 ## mouser-scraping
 * Non-functional, need to use puppeteer to collect html page data to then scrape.
 
-## puppeteer-testing
+## puppeteer_testing
 * Experimental sandbox for testing puppeteer functionality.
+* ``node puppeteer_testing.js`` to use
 
 ## button-2-test
 * Auto-generated puppeteer script simulating navigation of different pages in digikey. 
 * Currently, this script does not work due to lacking some unknown element, results in a status code 403 on digikey.
 * May be user agent credentials, javascript enabled, cookies, etc.
+* ``node button-2-test`` to use
 
 ## Others
 All other files need to be cleaned up/removed
