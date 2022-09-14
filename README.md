@@ -14,7 +14,7 @@ This repo is a mess currently and still being worked on
 ## mouser-scraping
 * Non-functional, need to use puppeteer to collect html page data to then scrape.
 
-## puppeteer_testing
+## puppeteer-testing
 * Experimental sandbox for testing puppeteer functionality.
 * ``node puppeteer-testing.js`` to use
 
