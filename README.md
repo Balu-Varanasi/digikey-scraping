@@ -16,7 +16,7 @@ This repo is a mess currently and still being worked on
 
 ## puppeteer_testing
 * Experimental sandbox for testing puppeteer functionality.
-* ``node puppeteer_testing.js`` to use
+* ``node puppeteer-testing.js`` to use
 
 ## button-2-test
 * Auto-generated puppeteer script simulating navigation of different pages in digikey. 
