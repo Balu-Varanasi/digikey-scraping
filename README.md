@@ -14,9 +14,9 @@ This repo is a mess currently and still being worked on
 ## mouser-scraping
 * Non-functional, need to use puppeteer to collect html page data to then scrape.
 
-## puppeteer_testing
+## puppeteer-testing
 * Experimental sandbox for testing puppeteer functionality.
-* ``node puppeteer_testing.js`` to use
+* ``node puppeteer-testing.js`` to use
 
 ## button-2-test
 * Auto-generated puppeteer script simulating navigation of different pages in digikey. 
