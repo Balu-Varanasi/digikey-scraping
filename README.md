@@ -29,5 +29,5 @@ This repo is a mess currently and still being worked on
 
 ## Others
 * Scraping Steps lists the general steps I took while scraping these websites
-All other files need to be cleaned up/removed
+* All other files need to be cleaned up/removed
 
