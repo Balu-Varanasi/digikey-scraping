@@ -11,6 +11,9 @@ This repo is a mess currently and still being worked on
 * Currently only collects data from one page of search results.
 * Can currently be used by replacing the "url" variable to the first page of a search result and running the notebook.
 
+## arrow-search-scraper
+* Scraping more than one page seems to have issues, along with gathering all of the products due to some external loading process
+* May need to add delay after navigation to allow for page to load all the products
 ## mouser-scraping
 * Non-functional, need to use puppeteer to collect html page data to then scrape.
 
@@ -25,5 +28,6 @@ This repo is a mess currently and still being worked on
 * ``node button-2-test`` to use
 
 ## Others
-All other files need to be cleaned up/removed
+* Scraping Steps lists the general steps I took while scraping these websites
+* All other files need to be cleaned up/removed
 
