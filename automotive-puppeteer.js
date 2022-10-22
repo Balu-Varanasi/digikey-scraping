@@ -14,23 +14,26 @@ const fs = require('fs');
   const promises = [];
   promises.push(page.waitForNavigation());
 
-  await page.goto('https://automotiveoem.com/INDEX',{
+  await page.goto('https://web.archive.org/web/20210613134731/https://automotiveoem.com/1-Source-Design_10854',{
   waitUntil: 'networkidle2',
   ignoreHTTPSerrors: true
   });
   await Promise.all(promises);
+  page.setDefaultNavigationTimeout(0); 
   let curr = 1;
-  while (await page.$(`#datatable-responsive_next`) != null || curr >= 5){
+  while (await page.$(`body > div.container.body > div > div.right_col > div:nth-child(4) > div > div > div.pagination_main.hidden-print > div > nav > ul > li:nth-child(4) > a > span:nth-child(1)`) != null){
     console.log(curr)
     if(curr != 1){
-    await page.click(`#datatable-responsive_next`);
-      promises.push(new Promise(r => setTimeout(r, 3000)));
-      await Promise.all(promises);
+    promises.push(page.waitForNavigation());
+    await page.click(`body > div.container.body > div > div.right_col > div:nth-child(4) > div > div > div.pagination_main.hidden-print > div > nav > ul > li:nth-child(4) > a > span:nth-child(1)`);
+    promises.push(new Promise(r => setTimeout(r, 4000)));
+    await Promise.all(promises);
+    
     }
     const data = await page.evaluate(() => document.querySelector('*').outerHTML);
-    await page.screenshot({path: `automotive-temp-pages/example${curr}.png`});
+    await page.screenshot({path: `automotive-temp-pages-wayback/example${curr}.png`});
           console.log(data);
-          fs.writeFile(`automotive-temp-pages/Output${curr}.html`, data, (err) => {
+          fs.writeFile(`automotive-temp-pages-wayback/Output${curr}.html`, data, (err) => {
       
             // In case of a error throw err.
             if (err) throw err;
