@@ -2,15 +2,19 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth');
 puppeteer.use(StealthPlugin());
 const fs = require('fs');
+const { executablePath } = require('puppeteer');
 
 const contents = fs.readFileSync('automotive-oem.txt', 'utf-8');
 const arr = contents.split(/\r?\n/);
 
 (async () => {
+
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: 'chrome',
     IgnoreHTTPSErrors: true,
-    args: ["--ignore-certificate-errors"]
+    args: ["--ignore-certificate-errors"],
+    // add this
+    executablePath: executablePath(),
   });
   const page = await browser.newPage();
   console.log(await browser.userAgent());
@@ -30,12 +34,12 @@ const arr = contents.split(/\r?\n/);
     await page.screenshot({path: `automotive-pro-pages/example${curr}.png`});
           console.log(data);
           fs.writeFile(`automotive-pro-pages/Output${curr}.html`, data, (err) => {
-      
+
             // In case of a error throw err.
             if (err) throw err;
       })
       promises.push(new Promise(r => setTimeout(r, 3500)));
       curr += 1;
     }
-  await browser.close(); 
+  await browser.close();
 })();

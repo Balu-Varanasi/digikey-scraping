@@ -1,0 +1,24 @@
+{
+  "name": "digikey-scraping",
+  "version": "1.0.0",
+  "description": "This repo is a mess currently and still being worked on",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Balu-Varanasi/digikey-scraping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Balu-Varanasi/digikey-scraping/issues"
+  },
+  "homepage": "https://github.com/Balu-Varanasi/digikey-scraping#readme",
+  "dependencies": {
+    "puppeteer": "^19.2.2",
+    "puppeteer-extra": "^3.3.4",
+    "puppeteer-extra-plugin-stealth": "^2.11.1"
+  }
+}

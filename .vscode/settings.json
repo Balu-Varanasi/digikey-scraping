@@ -1,0 +1,50 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#1a1a1a",
+    "activityBar.activeBackground": "#1a1a1a",
+    "activityBar.activeBorder": "#606020",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#606020",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "titleBar.activeBackground": "#000000",
+    "titleBar.inactiveBackground": "#00000099",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "statusBar.background": "#000000",
+    "statusBarItem.hoverBackground": "#1a1a1a",
+    "statusBar.foreground": "#e7e7e7"
+  },
+  "prettier.disableLanguages": ["html"],
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "editor.formatOnPaste": true,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "peacock.color": "#000000",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/.idea": true
+  },
+  "files.trimTrailingWhitespace": true
+}

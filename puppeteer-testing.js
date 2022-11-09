@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 const fs = require('fs');
 (async () => {
   const browser = await puppeteer.launch({
-    headless: false,
+    headless: 'chrome',
     ignoreDefaultArgs: ['--disable-extensions'],
   });
   const page = await browser.newPage();
@@ -23,7 +23,7 @@ const fs = require('fs');
   await page.screenshot({path: 'example.png'});
         console.log(data);
         fs.writeFile('Output.html', data, (err) => {
-      
+
           // In case of a error throw err.
           if (err) throw err;
       })*/
